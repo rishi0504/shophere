@@ -1,0 +1,62 @@
+<div class="col-sm-12" ng-controller="addProduct" style="margin-bottom: 5%;">
+    <div class="col-sm-offset-4 col-sm-4">
+        <div class="panel panel-success">
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="productName">Product Name:</label>
+                        <input type="text" class="form-control" id="productName" ng-model="productName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerId">Customer Id:</label>
+                        <input type="text" class="form-control" id="customerId" ng-model="customerId">
+                    </div>
+                    <div class="form-group">
+                        <label for="prize">Prize:</label>
+                        <input type="text" class="form-control" id="prize" ng-model="prize">
+                    </div>
+                    <div class="form-group">
+                        <label for="size">Available Size (Comma Seperated):</label>
+                        <input type="text" class="form-control" id="size" ng-model="availableSize">
+                    </div>
+                    <div class="form-group">
+                        <label for="offer">Offer:</label>
+                        <input type="text" class="form-control" id="offer" ng-model="offer">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category:</label>
+                        <select class="form-control" ng-model="category">
+                            <option value="Men's Fashion">Men's Fashion</option>
+                            <option value="Women's Fashion">Women's Fashion</option>
+                            <option value="Kids">Kids</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="size">Product Detail:</label>
+                        <input type="text" class="form-control" id="productDetail1" ng-model="productDetail1">
+                        <input type="text" class="form-control" id="productDetail2" ng-model="productDetail2" style="margin-top:1%;">
+                        <input type="text" class="form-control" id="productDetail3" ng-model="productDetail3" style="margin-top:1%;">
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Upload Images:</label>
+                        <input type="file" onchange="angular.element(this).scope().newImageUploaded(this)" name="files" ng-model="files" multiple/>
+                        <!-- Need to work here for file upload-->
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Uploaded Images:</label>
+                        <li ng-repeat="file in files track by $index">{{file.name}}</li>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success" ng-click="addProduct();">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-sm-9">
+    <div class="panel panel-success">
+            <div class="panel-body">
+            </div>
+         </div>
+  </div> -->
+</div>

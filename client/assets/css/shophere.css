@@ -1,0 +1,42 @@
+body{
+    overflow-x: hidden;
+     
+}
+
+.front-view{
+	 background: url('../images/cloths.jpg') no - repeat center center;
+	 width: 100%;
+	 height: 100%;
+}
+nav{
+	background-color: #232f3e;;
+}
+.text_white{
+	color:white;
+}
+.product_p_tag{
+	font-size: 10px;
+}
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
+

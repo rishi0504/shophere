@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="shophere">
+<head>
+<meta charset="UTF-8">
+<title>Shophere</title>
+<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap-select/dist/css/bootstrap-select.min.css">
+<link rel="stylesheet" href="/client/assets/css/shophere.css"/>
+<link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.min.css"/>
+
+</head>
+<body>
+	<div ng-include="'./views/header.html'"></div>
+	<div ng-view>
+		
+	</div>
+	<div style="position: fixed; bottom: 0; left: 0; right: 0;" ng-include="'./views/footer.html'"></div>
+	<!-- <div ng-include="'./views/footer.html'"></div> -->
+</body>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/bower_components/angular-route/angular-route.min.js"></script>
+<script src="/bower_components/ngstorage/ngStorage.min.js"></script>
+<script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+<script src="/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="/bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+<script src="../client/app.js"></script>
+<script src="../client/modules/home_module/home.module.js"></script>
+<script src="../client/modules/home_module/home.controller.js"></script>
+<script src="../client/modules/header_module/header.route.js"></script>
+<script src="../client/modules/header_module/header.controller.js"></script>
+<script src="../client/modules/product_module/product.route.js"></script>
+<script src="../client/modules/product_module/product.controller.js"></script>
+<script>
+$(document).ready(function(){
+	$('.selectpicker').selectpicker();	
+});
+
+</script>
+
+
+
+
+</html>

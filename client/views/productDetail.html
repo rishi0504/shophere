@@ -1,0 +1,27 @@
+<div ng-controller="productDetailController">
+    <div class="col-sm-12" ng-init="getProduct()">
+        <div class="panel panel-success">
+            <div class="panel-body">
+                <div class="col-sm-2">
+                    <div class="col-sm-12" ng-repeat="singleProductImage in singleProduct.allImages track by $index">
+                        <img class="img-responsive" ng-mouseover="enlargeImage(singleProductImage)" ng-src="{{singleProductImage}}" alt="Jeans" height="50%" width="50%">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img class="img-responsive" alt="" width="90%" height="90%" id="product_id" style="margin-top: 10%;" />
+                </div>
+                <div class="col-sm-3">
+                    <h4>{{singleProduct.productName}} :</h4>
+                    <p>Rs : {{singleProduct.prize}}, Flat off : {{singleProduct.offer}}</p>
+                    <p>Ratings : <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></p>
+                    <p>Description :</p>
+                    <ul style="list-style-type:square">
+                        <li ng-repeat="description in singleProduct.description">{{description}}</li>
+                    </ul>
+                    <button class="btn btn-primary" data-dismiss="modal" style="float:right; margin-bottom:1%;">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
